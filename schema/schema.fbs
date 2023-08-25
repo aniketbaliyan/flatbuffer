@@ -1,0 +1,23 @@
+namespace Schema;
+
+table Person {
+  name:string;
+  age:ushort;
+  weight:float;
+  gender:string;
+}
+
+table Group {
+    name:string;
+    age:float;
+    weight:float;
+    list:[string];
+}
+union Type { Person, Group }
+
+table Client{
+    name:string;
+    client_data:Type;
+}
+
+root_type Client;
