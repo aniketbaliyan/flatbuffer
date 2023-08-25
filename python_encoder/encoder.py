@@ -48,7 +48,7 @@ class Encoder:
             offsetOfNames.append(temp)
 
         Schema.Group.GroupStartListVector(builder, len(offsetOfNames))
-        # Note: Since we prepend the data, prepend the weapons in reverse order.
+        # Note: Since we prepend the data, prepend the names in reverse order.
         for offset in reversed(offsetOfNames):
                 builder.PrependUOffsetTRelative(offset)
 
